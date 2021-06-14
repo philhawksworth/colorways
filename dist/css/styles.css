@@ -1,0 +1,47 @@
+:root {
+  --primary-page-color: #111;
+  --primary-text-color: #eee;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  color: var(--primary-text-color);
+  font-family: Georgia, serif;
+  font-weight: normal;
+  line-height: 28px;
+  font-size: 14px;
+  background-color: var(--primary-page-color);
+  padding: 2rem;
+}
+
+.container {
+  max-width: 90%;
+  margin:0 auto;
+
+}
+
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+ul {
+  margin: 1rem auto;
+  text-align: left;
+}
+
+header {
+  margin: 1rem 0 3rem;
+  font-size: 0.9rem;
+}
+footer {
+  margin-top: 3rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.8rem;
+}

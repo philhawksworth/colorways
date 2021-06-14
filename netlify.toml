@@ -1,0 +1,31 @@
+[build] 
+  publish = "dist"
+  command = ""
+
+[dev] 
+  publish = "dist"
+  command = ""
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/colorway/*"
+  to = "/.netlify/functions/odb-view-colorway/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/colourway/*"
+  to = "/colorway/:splat"
+  status = 302
+
+
+[[redirects]]
+  from = "/*"
+  to = "/404"
+  status = 404

@@ -4,8 +4,6 @@ const {
   SUPABASE_SERVICE_API_KEY
 } = process.env;
 
-console.log(process.env);
-
 exports.handler = async event => {
   
   if (event.httpMethod !== "POST") {
@@ -38,9 +36,7 @@ exports.handler = async event => {
     }
   ]);
   
-  console.log(data, error);
-
-  // the unique id for this item
+  // the unique id for this item returned from the db service
   const id = data[0].id;
   
   console.log(`NEW URL: /colorway/${id}`);

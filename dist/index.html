@@ -4,19 +4,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ColorWays</title>
+  <title>ColorWays - make your own palette</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  
+   <header>
+      <h1>ColorWays</h1>
+      <p>Make and share colorful inspiration</p>
+   </header>
+   <main>
 
-  <h1>ColorWays</h1>
-  <p>Make and share colorful inspiration</p>
+      <form action="/api/save" name="colorway" method="POST">
+      
+         <input type="text" id="palette_title" name="title" placeholder="A name for this colorway" />
+         <div class="palette">
+         <label for="color_1" class="pickerLabel">
+            <input type="color" class="colorPicker" id="color_1" name="color_1" value="#A1D2CE" />
+         </label>
+         <label for="color_2" class="pickerLabel">
+            <input type="color" class="colorPicker" id="color_2" name="color_2" value="#78CAD2" />
+         </label>
+         <label for="color_3" class="pickerLabel">
+            <input type="color" class="colorPicker" id="color_3" name="color_3" value="#62A8AC" />
+            
+         </label>
+         <label for="color_4" class="pickerLabel">
+            <input type="color" class="colorPicker" id="color_4" name="color_4" value="#5497A7" />
+         </label>
+         <label for="color_5" class="pickerLabel">
+            <input type="color" class="colorPicker" id="color_5" name="color_5" value="#50858B" />
+         </label>
+         </div>
+         <input type="submit" value="Save this colorway"/>
+      </form>
 
-  <h2>Here are some examples</h2>
-  <p>API gets 5 recent palettes and puts them here</p>
+      <ol class="instructions">
+         <li>Make a colorway</li>
+         <li>Give it a name</li>
+         <li>Save it</li>
+         <li>Get a URL to share</li>
+      <ol>
 
-  <a href="/new">Make and share your own color way</a>
+   </main>
+
+
+   <footer>
+      <p>
+         This site is a demonstration of Netlify <a href="https://www.netlify.com/blog/2021/04/14/distributed-persistent-rendering-a-new-jamstack-approach-for-faster-builds/">On Demand Builder functions</a>. Get unlimited pages in your site without bloating your build.
+      </p>
+      <p>Learn more about howe ODB functions deliver <a href="https://www.netlify.com/blog/2021/04/14/distributed-persistent-rendering-a-new-jamstack-approach-for-faster-builds/">Distributed Persistent Rendering in ths post</a>, or check out the <a href="">code in the repo</a></p>
+   </footer>
 
 </body>
 </html>
